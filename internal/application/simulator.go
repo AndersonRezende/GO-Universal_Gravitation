@@ -1,6 +1,8 @@
 package application
 
-import "goGravity/domain"
+import (
+	"goGravity/internal/domain"
+)
 
 type Simulator struct {
 	Simulation   *domain.Simulation
@@ -12,4 +14,8 @@ type Simulator struct {
 func (s *Simulator) Update() {
 	dt := s.InputHandler.GetDeltaTime() * s.TimeScale
 	s.Simulation.Step(dt)
+}
+
+func (s *Simulator) Draw() {
+	s.Renderer.DrawBodies(s.Simulation.Bodies)
 }

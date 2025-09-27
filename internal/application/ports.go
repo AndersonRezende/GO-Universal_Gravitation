@@ -1,6 +1,8 @@
 package application
 
-import "goGravity/domain"
+import (
+	"goGravity/internal/domain"
+)
 
 type Renderer interface {
 	DrawBodies(bodies []*domain.Body)
