@@ -31,7 +31,7 @@ func (g *Game) Layout(outsideWidth, outsideHeight int) (int, int) {
 func main() {
 	bodies := []*domain.Body{
 		{Mass: 1.98892e30, Position: domain.Vector{950, 540}, Velocity: domain.Vector{0, 0}, Color: color.RGBA{A: 255, R: 255, G: 255, B: 0}, Name: "Sun", Size: 100},
-		{Mass: 5.972e24, Position: domain.Vector{15, 15}, Velocity: domain.Vector{0, 0}, Color: color.RGBA{A: 255, B: 255}, Name: "Earth", Size: 10},
+		{Mass: 5.972e24, Position: domain.Vector{950, 15}, Velocity: domain.Vector{9e14, 0}, Color: color.RGBA{A: 255, B: 255}, Name: "Earth", Size: 10},
 	}
 	simulation := &domain.Simulation{Bodies: bodies}
 
